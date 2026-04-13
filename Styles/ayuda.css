@@ -75,7 +75,7 @@ body {
     border-radius: 5px;
 }
 
-/* --- MOBILE MENU & OVERLAY --- */
+
 .nav-toggle {
     display: none;
 }
@@ -283,7 +283,7 @@ legend{
     color: #d93025;
     font-size: 0.85rem;
     margin-top: 5px;
-    display: none; /* Oculto por defecto */
+    display: none; 
 }
 
 .error-message.active {
@@ -291,6 +291,6 @@ legend{
 }
 
 .input-error {
-    border: 2px solid #d93025 !important;
+    border: 2px solid #d93025 ;
     background-color: #fff7f6;
 }

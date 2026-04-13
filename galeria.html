@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="Styles/ayuda.css">
+    <link rel="stylesheet" href="Styles/galeria.css">
     <script src="scripts/hamburger.js"></script>
-    <script src="Scripts/formulario.js"></script>
+    <script src="Scripts/carrusel.js"></script>
     <title>Galería de Fotos</title>
 </head>
 
@@ -40,4 +40,54 @@
             </div>
         </div>
     </header>
+
+
+    <main class="gallery-main">
+        <section class="carrusel-section">
+            <h2 class="gallery-title" style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Nuestra Galería</h2>
+
+            <div class="carrusel">
+                <div class="carrusel-track">
+                    <div class="carrusel-item">
+                        <img src="img/galeria1.jpg" alt="Calzado Variedades Sumaya">
+                        <p class="caption">Nueva Colección</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="img/galeria2.jpg" alt="Interior de la tienda">
+                        <p class="caption">Nuestra Tienda</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="img/galeria3.jpg" alt="Atención al cliente">
+                        <p class="caption">Calidad y Servicio</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="img/galeria4.jpg" alt="Modelos exclusivos">
+                        <p class="caption">Estilo Único</p>
+                    </div>
+                    <div class="carrusel-item"><img src="img/galeria5.jpg" alt="Galeria">
+                        <p class="caption">Variedad</p>
+                    </div>
+                    <div class="carrusel-item"><img src="img/galeria6.jpg" alt="Galeria">
+                        <p class="caption">Confort</p>
+                    </div>
+                    <div class="carrusel-item"><img src="img/galeria7.jpg" alt="Galeria">
+                        <p class="caption">Tendencia</p>
+                    </div>
+                    <div class="carrusel-item"><img src="img/galeria8.jpg" alt="Galeria">
+                        <p class="caption">Honduras</p>
+                    </div>
+                </div>
+
+                <button id="prev" class="carrusel_btn"><i class="fas fa-chevron-left"></i></button>
+                <button id="next" class="carrusel_btn"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="carousel-dots"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Variedades Sumaya</p>
+    </footer>
+
 </body>

@@ -75,7 +75,7 @@ body {
     border-radius: 5px;
 }
 
-/* --- MOBILE MENU & OVERLAY --- */
+
 .nav-toggle {
     display: none;
 }
@@ -234,7 +234,7 @@ body {
     color: #9E00BF;
 }
 
-/* --- RESPONSIVE --- */
+
 
 @media (max-width: 1050px) {
     .nav-list {
@@ -270,18 +270,18 @@ body {
 .section-title {
     font-size: 2rem;
     font-weight: 700;
-    color: #000000; /* El azul que usas */
+    color: #000000; 
     margin-bottom: 2rem;
     text-align: center;
     position: relative;
 }
 
-/* --- LISTA DE EVENTOS (TARJETAS) --- */
+
 .news-list {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr; /* Una columna por defecto */
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -291,7 +291,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 5px solid transparent; /* Preparado para el hover */
+    border-left: 5px solid transparent; 
     overflow: hidden;
 }
 
@@ -307,10 +307,10 @@ body {
 .news-item:hover {
     transform: translateX(10px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    border-left: 5px solid #9E00BF; /* Línea morada al pasar el mouse */
+    border-left: 5px solid #9E00BF; 
 }
 
-/* --- CONTENIDO DE TEXTO --- */
+
 .section-content {
     font-size: 1.15rem;
     color: #555;
@@ -320,16 +320,16 @@ body {
     margin: 0 auto 2.5rem;
 }
 
-/* --- UTILIDADES --- */
+
 .center {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 1rem;
-    list-style: none; /* Por si está dentro de una UL */
+    list-style: none; 
 }
 
-/* --- AJUSTES PARA MÓVILES --- */
+
 @media (max-width: 600px) {
     .section {
         padding: 3rem 1rem;
@@ -347,18 +347,18 @@ body {
 
 
 .section-highlight {
-    background-color: #f8f4ff; /* Un lila/lavanda muy suave */
+    background-color: #f8f4ff; 
     width: 100%;
-    max-width: 100vw !important; /* Rompe el contenedor para ir de lado a lado */
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
+    max-width: 100vw; 
+    margin-left: calc(50% - 50vw) ;
+    margin-right: calc(50% - 50vw);
     padding-top: 5rem;
     padding-bottom: 5rem;
     border-top: 1px solid #e0d5f0;
     border-bottom: 1px solid #e0d5f0;
 }
 
-/* Ajuste del título para esta sección */
+
 .section-highlight .section-title {
     color: #000000; 
     margin-bottom: 1.5rem;
