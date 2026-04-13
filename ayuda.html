@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Styles/ayuda.css">
+    <script src="scripts/hamburger.js"></script>
+    <script src="Scripts/formulario.js"></script>
+    <title>Cómo Ayudar</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+        <label for="nav-toggle" class="hamburger" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </label>
+        <nav class="main-nav">
+            <a class="nav-logo" href="index.html"><img src="Sources/Sumaya1.jpeg" alt="Logo"><span
+                    class="site-title">Variedades Sumaya</span></a>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about-us.html">Acerca</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="ayuda.html">Cómo Ayudar</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="donations.html">Donar</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay" aria-hidden="true">
+            <div class="nav-panel">
+                <button class="close-panel" aria-label="Cerrar menú">&times;</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <section class="section-hero">
+            <div class="hero-content">
+                <h2>Únete a la Familia Sumaya</h2>
+                <p>En Variedades Sumaya creemos que el crecimiento es compartido. Ya seas un cliente fiel, un
+                    emprendedor local o un proveedor, hay muchas maneras en las que podemos colaborar.</p>
+            </div>
+        </section>
+
+        <section class="help-methods">
+            <div class="container">
+                <h2>Cómo Colaborar</h2>
+                <div class="method-item">
+                    <strong>Programa de Embajadores:</strong> Comparte tus compras y obtén cupones.
+                </div>
+                <div class="method-item">
+                    <strong>Alianzas Locales:</strong> Dinámicas conjuntas para fortalecer el comercio.
+                </div>
+                <div class="method-item">
+                    <strong>Ventas al Mayor:</strong> Precios especiales para emprendedores.
+                </div>
+            </div>
+        </section>
+
+        <section class="volunteer-form">
+            <div class="form-container">
+                <h2>Solicitud de Alianza o Empleo</h2>
+                <form id="helpForm">
+                    <fieldset>
+                        <legend>Información de Contacto</legend>
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo:</label>
+                            <input type="text" id="nombre" placeholder="Escribe tu nombre...">
+                            <span id="nombre-error" class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="identidad">Número de Identidad / RTN:</label>
+                            <input type="text" id="identidad" placeholder="13 o 14 dígitos sin guiones...">
+                            <span id="identidad-error" class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="nacimiento">Fecha de Nacimiento:</label>
+                            <input type="date" id="nacimiento">
+                            <span id="nacimiento-error" class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono de Contacto:</label>
+                            <input type="tel" id="telefono" placeholder="Ej: 99990000">
+                            <span id="telefono-error" class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" id="correo" placeholder="ejemplo@correo.com">
+                            <span id="correo-error" class="error-message"></span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Interés de Colaboración</legend>
+                        <div class="form-group">
+                            <label for="interes">¿En qué área te gustaría colaborar?</label> <br>
+                            <select id="interes">
+                                <option value="empleo">Búsqueda de Empleo</option>
+                                <option value="proveedor">Ser Proveedor</option>
+                                <option value="alianza">Alianza Comercial</option>
+                            </select>
+                            <span id="interes-error" class="error-message"></span> 
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Cuéntanos más sobre tu propuesta:</label>
+                            <textarea id="mensaje" rows="4" placeholder="Mínimo 5 palabras..."></textarea>
+                            <span id="mensaje-error" class="error-message"></span>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
