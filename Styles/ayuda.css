@@ -6,7 +6,6 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-
 .site-header {
     display: flex;
     align-items: center;
@@ -52,7 +51,6 @@ body {
     font-size: 1.2rem;
 }
 
-
 .nav-list {
     display: flex;
     list-style: none;
@@ -74,7 +72,6 @@ body {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
-
 
 .nav-toggle {
     display: none;
@@ -150,7 +147,6 @@ body {
     padding: 0.5rem 0;
 }
 
-
 .nav-toggle:checked~.nav-overlay {
     opacity: 1;
     pointer-events: auto;
@@ -158,6 +154,16 @@ body {
 
 .nav-toggle:checked~.nav-overlay .nav-panel {
     transform: translateX(0);
+}
+
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+    }
 }
 
 

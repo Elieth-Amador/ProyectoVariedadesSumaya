@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const MAX_MOBILE_LINKS = 9;
+    const MAX_MOBILE_LINKS = 10;
 
     const desktopList = document.querySelector('.nav-list');
     const overlay = document.querySelector('.nav-overlay');
     const overlayPanel = document.querySelector('.nav-panel');
     let overlayList = document.querySelector('.nav-list-overlay');
 
+  
     function closeOverlay() {
-        const cb = document.querySelector('.nav-toggle');
+        const cb = document.getElementById('nav-toggle');
         if (cb) cb.checked = false;
     }
 
     function buildOverlayFromDesktop() {
         if (!desktopList || !overlayPanel) return;
+        
+  
         if (!overlayList) {
             overlayList = document.createElement('ul');
             overlayList.className = 'nav-list-overlay';
@@ -20,60 +23,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const desktopItems = Array.from(desktopList.querySelectorAll('li'));
-        const mobileItems = [];
-        const currentPath = (function () { try { return new URL(location.href).pathname; } catch (e) { return location.pathname || ''; } })();
-        const isHome = currentPath === '/' || currentPath.endsWith('/index.html') || currentPath.endsWith('/index.htm');
-        for (const li of desktopItems) {
-            const a = li.querySelector('a');
-            if (!a) continue;
-            if (a.dataset && a.dataset.hideMobile === 'true') continue;
-            let linkPath = '';
-            try {
-                linkPath = new URL(a.href, location.href).pathname;
-            } catch (e) {
-                linkPath = a.getAttribute('href') || '';
-            }
-            if (linkPath === currentPath) {
-                const linkIsHome = linkPath === '/' || linkPath.endsWith('/index.html') || linkPath.endsWith('/index.htm');
-                if (!(isHome && linkIsHome)) {
-                    continue;
-                }
-            }
-            mobileItems.push(li);
-            if (mobileItems.length >= MAX_MOBILE_LINKS) break;
-        }
+        overlayList.innerHTML = ''; 
 
-        overlayList.innerHTML = '';
-        mobileItems.forEach(li => overlayList.appendChild(li.cloneNode(true)));
+        desktopItems.forEach((li, index) => {
+            if (index < MAX_MOBILE_LINKS) {
+                const clone = li.cloneNode(true);
+                overlayList.appendChild(clone);
+            }
+        });
+
+   
         attachOverlayLinkHandlers();
     }
 
-    function buildDesktopFromOverlay() {
-        if (!overlayList) overlayList = document.querySelector('.nav-list-overlay');
-        if (!overlayList || document.querySelector('.nav-list')) return;
-        const nav = document.querySelector('.main-nav');
-        if (!nav) return;
-        const ul = document.createElement('ul');
-        ul.className = 'nav-list';
-        ul.innerHTML = overlayList.innerHTML;
-        nav.appendChild(ul);
-    }
-
     function attachOverlayLinkHandlers() {
-        if (!overlayList) overlayList = document.querySelector('.nav-list-overlay');
-        if (!overlayList) return;
-        overlayList.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => closeOverlay());
+        // Buscamos los enlaces dentro de la lista móvil recién creada
+        const links = document.querySelectorAll('.nav-list-overlay a');
+        links.forEach(a => {
+            a.addEventListener('click', closeOverlay);
         });
     }
 
+
     if (desktopList) {
         buildOverlayFromDesktop();
-    } else if (overlayList) {
-        buildDesktopFromOverlay();
     }
 
-    attachOverlayLinkHandlers();
 
     if (overlay) {
         overlay.addEventListener('click', (e) => {
@@ -81,5 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.querySelectorAll('.close-panel').forEach(btn => btn.addEventListener('click', closeOverlay));
+
+    document.querySelectorAll('.close-panel').forEach(btn => {
+        btn.addEventListener('click', closeOverlay);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('close-panel')) {
+            closeOverlay();
+        }
+    });
 });
