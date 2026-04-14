@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/donations.css">
+    <script src="scripts/hamburger.js"></script>
+    <script src="Scripts/donations.js"></script>
+    <title>Donaciones</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+        <label for="nav-toggle" class="hamburger" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </label>
+        <nav class="main-nav">
+            <a class="nav-logo" href="index.html"><img src="Sources/Sumaya1.jpeg" alt="Logo"><span
+                    class="site-title">Variedades Sumaya</span></a>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about-us.html">Acerca</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="ayuda.html">Cómo Ayudar</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="donations.html">Donar</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay" aria-hidden="true">
+            <div class="nav-panel">
+                <button class="close-panel" aria-label="Cerrar menú">&times;</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="donations-main">
+        <section class="donations-hero">
+            <div class="hero-bg-overlay">
+                <img src="img/hero-donaciones.jpg" alt="Donaciones Variedades Sumaya">
+            </div>
+            <div class="container hero-container-info">
+                <div class="hero-content-box">
+                    <h2>Tus Donaciones Nos Ayudan a Seguir Creciendo</h2>
+                    <p>Tu apoyo es fundamental para ejecutar nuestros proyectos sociales y llegar a más familias en la
+                        comunidad.</p>
+                    <a href="#formulario" class="btn-primary-donar">Registrar Donación</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="donations-details-vertical">
+            <div class="container">
+                <div class="vertical-block needs-section">
+                    <h2>Necesidades Prioritarias</h2>
+                    <p>Para maximizar el impacto de nuestros proyectos, priorizamos las siguientes donaciones:</p>
+                    <div class="needs-list-vertical">
+                        <div class="need-item"><span class="accent-bar"></span> Alimentos no perecederos (arroz,
+                            frijoles, azúcar, aceite)</div>
+                        <div class="need-item"><span class="accent-bar"></span> Artículos de higiene (jabón, pañales)
+                        </div>
+                        <div class="need-item"><span class="accent-bar"></span> Ropa y calzado en buen estado</div>
+                        <div class="need-item"><span class="accent-bar"></span> Útiles escolares</div>
+                    </div>
+                </div>
+
+                <div class="vertical-block bank-section">
+                    <h2>Transferencia Bancaria (BAC)</h2>
+                    <div class="bank-info-card">
+                        <p><strong>Cuenta:</strong> 756907951</p>
+                        <p><strong>Nombre:</strong> Genesis Valeria Álvarez Martinez</p>
+                        <p><strong>Ubicación:</strong> Centro Comercial Unicentro, Calle Orense.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formulario" class="donation-form-section">
+            <div class="form-container">
+                <h2>Formulario de donación</h2>
+                <form id="donationsForm" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                        <span id="error-nombre" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" name="correo" placeholder="tu@correo.com">
+                        <span id="error-correo" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="monto">Monto:</label>
+                        <input type="number" id="monto" name="monto" placeholder="Cantidad">
+                        <span id="error-monto" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje (opcional):</label>
+                        <textarea id="mensaje" name="mensaje" rows="4"
+                            placeholder="Mensaje para la organización"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Donar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
