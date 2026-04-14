@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <script src="scripts/hamburger.js"></script>
+    <script src="Scripts/contacto.js"></script>
+    <title>Página de Contacto</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+        <label for="nav-toggle" class="hamburger" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </label>
+        <nav class="main-nav">
+            <a class="nav-logo" href="index.html"><img src="Sources/Sumaya1.jpeg" alt="Logo"><span
+                    class="site-title">Variedades Sumaya</span></a>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about-us.html">Acerca</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="ayuda.html">Cómo Ayudar</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="donations.html">Donar</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay" aria-hidden="true">
+            <div class="nav-panel">
+                <button class="close-panel" aria-label="Cerrar menú">&times;</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="contacto-main">
+        <section class="contacto-hero">
+            <div class="hero-bg-overlay">
+                <img src="img/hero-contacto.jpg" alt="Contacto Variedades Sumaya">
+            </div>
+            <div class="container hero-container-info">
+                <div class="hero-content-box">
+                    <h2>¿Tienes alguna duda?</h2>
+                    <p>Estamos aquí para ayudarte. Si tienes preguntas sobre nuestros productos, pedidos especiales o
+                        quieres saber más sobre nuestra ubicación, no dudes en escribirnos.</p>
+                    <a href="#formulario-contacto" class="btn-primary-contacto">Saber más</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto-info-section">
+            <div class="container">
+                <div class="info-vertical-stack">
+                    <div class="info-card">
+                        <span class="accent-bar"></span>
+                        <h3>Responsable</h3>
+                        <p>Genesis Valeria Álvarez Martinez</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="accent-bar"></span>
+                        <h3>Teléfono</h3>
+                        <p>+504 9999-9999</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="accent-bar"></span>
+                        <h3>Ubicación</h3>
+                        <p>Centro Comercial Unicentro, Calle Orense, Tegucigalpa, Honduras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formulario-contacto" class="contacto-form-section">
+            <div class="form-container">
+                <h2>Envíanos un mensaje</h2>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+                        <span id="error-nombre" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                        <span id="error-correo" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5"
+                            placeholder="¿En qué podemos ayudarte?"></textarea>
+                        <span id="error-mensaje" class="error-message"></span>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Variedades Sumaya</p>
+    </footer>
+
+</body>

@@ -1,0 +1,351 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.site-header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+    background: #9E00BF;
+    color: #fff;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.site-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-panel {
+    background: #fff;
+    width: 280px;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.close-panel {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.nav-list-overlay {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.nav-list-overlay li {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-list-overlay a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+
+.nav-toggle:checked~.nav-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.nav-toggle:checked~.nav-overlay .nav-panel {
+    transform: translateX(0);
+}
+
+
+.contacto-main {
+    width: 100%;
+}
+
+.contacto-hero {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-overlay img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.hero-container-info {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-content-box h2 {
+    color: #000000;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero-content-box p {
+    color: #151515;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-primary-contacto {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #8e00a3;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary-contacto:hover {
+    background-color: #9E00BF;
+    transform: translateY(-3px);
+}
+
+.contacto-info-section {
+    padding: 60px 0;
+    background-color: #5d0074;
+}
+
+.info-vertical-stack {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.info-card .accent-bar {
+    width: 50px;
+    height: 4px;
+    background: #f39c12;
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+.info-card h3 {
+    color: #17458f;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    color: #252525;
+    font-size: 1.1rem;
+}
+
+.contacto-form-section {
+    background-color: #f4f7f6;
+    padding: 80px 20px;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1f1f1f;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #760097;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #9E00BF;
+}
+
+@media (max-width: 768px) {
+    .hero-content-box h2 { font-size: 2rem; }
+    .form-container { padding: 25px; }
+}
+
+.site-footer {
+    background-color: #9E00BF; 
+    color: #ffffff;            
+    text-align: center;        
+    padding: 2rem 1rem;        
+    width: 100%;
+    position: relative;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
